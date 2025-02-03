@@ -28,26 +28,3 @@ def chat():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-# app = Flask(__name__)
-
-# # Load a pretrained chatbot model from Hugging Face
-# chatbot = pipeline('text-generation', model='gpt2')
-
-# @app.route('/')
-# def home():
-#     return "Chatbot is running!"
-
-# @app.route('/chat', methods=['POST'])
-# def chat():
-#     user_input = request.json.get('message', '')
-#     if not user_input:
-#         return jsonify({"error": "No input provided"}), 400
-    
-#     response = chatbot(user_input, max_length=50, num_return_sequences=1,temperature=0.7,top_k=50, top_p=0.9)
-#     bot_reply = response[0]['generated_text']
-
-#     return jsonify({"reply": bot_reply})
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
